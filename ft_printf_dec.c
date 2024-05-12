@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_printf_dec(int num)
+int ft_printf_dec(int num)
 {
 	char *n;
 	int i;

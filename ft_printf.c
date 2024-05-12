@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-static int	print_formatted(const char specifier, va_list ap)
+static int print_formatted(const char specifier, va_list ap)
 {
-	int	count;
+	int count;
 	count = 0;
 
 	if (specifier == 'c')
@@ -22,41 +22,43 @@ static int	print_formatted(const char specifier, va_list ap)
 	else if (specifier == 's')
 		count += ft_printf_str(va_arg(ap, char *));
 	// else if (specifier == 'p')
-		// count += ft_printf_ptr(va_arg(ap, void *));
+	// count += ft_printf_ptr(va_arg(ap, void *));
 	else if (specifier == 'd')
 		count += ft_printf_dec(va_arg(ap, int));
 	// else if (specifier == 'i')
-		// count += function_dec();
+	// count += function_dec();
 	// else if (specifier == 'u')
-		// count += function_decimal();
+	// count += function_decimal();
 	// else if (specifier == 'x')
-		// count += function_hexadecimal();
+	// count += function_hexadecimal();
 	// else if (specifier == 'X')
-		// count += function_hexadecimal();
+	// count += function_hexadecimal();
 	else
 		count += ft_printf_char(specifier);
 	return (count);
 }
-int	ft_printf(const char *str, ...)
+int ft_printf(const char *str, ...)
 {
-	va_list	ap;
-	int		count;
+	va_list ap;
+	int count;
 
 	count = 0;
 	va_start(ap, str);
 	while (*str)
 	{
-		if (*str == '%' && *(str + 1))
+		if (*str == '%' && *(str + 1)){
 			count += print_formatted(*(str + 1), ap);
+			str++;
+		}
 		else
 			count += ft_printf_char(*str);
-			str++;
+		str++;
 	}
 	va_end(ap);
 	return (count);
 }
 
-int	main(void)
+int main(void)
 {
 	ft_printf("%d\n", -10);
 	// printf("%d\n", num);
