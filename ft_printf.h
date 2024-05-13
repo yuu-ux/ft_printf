@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:33:38 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/12 20:41:58 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/13 23:20:59 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 int	ft_printf(const char *str, ...);
 int	handle_format(const char specifier, va_list args);
+int	ft_printf_unsigned_dec(unsigned int n);
 int	ft_printf_char(char c);
 int	ft_printf_str(char *s);
 int ft_printf_dec(int num);

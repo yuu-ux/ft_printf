@@ -6,14 +6,21 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:57:07 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/12 20:54:19 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/13 23:24:45 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 int	ft_printf_str(char *s)
 {
-	while (*s)
-		ft_printf_char(*s);
-	return (1);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		ft_printf_char(s[i]);
+		i++;
+	}
+	return (i);
 }
