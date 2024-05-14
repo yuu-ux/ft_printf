@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
+/*   ft_printf_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 20:24:07 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/14 20:27:08 by yehara           ###   ########.fr       */
+/*   Created: 2024/05/14 20:28:44 by yehara            #+#    #+#             */
+/*   Updated: 2024/05/14 21:25:00 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// int ft_printf_ptr(void *ptr)
-// {
-// 	int count;
-// 	int address;
+#include "ft_printf.h"
 
-// 	address = (int)ptr;
-// 	count = 0;
-	
-// 	if (address < 9)
-// 		count += ft_printf_ptr(uintptr_t(address / 16));
-// 	ft_printf_char((address % 10) + '0');
-// 	return (count);
-// }
+int	ft_printf_hex(unsigned int hex, char specifier)
+{
+	char	*hex_digit;
+	int		count;
+
+	count = 0;
+	hex_digit = HEX_LOWER;
+	if (specifier == 'X')
+		hex_digit = HEX_UPPER;
+	if (hex >= 16)
+		count += ft_printf_hex((hex / 16), specifier);
+	ft_printf_char(hex_digit[hex % 16]);
+	return (count + 1);
+}

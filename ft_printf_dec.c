@@ -6,13 +6,13 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 20:31:49 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/12 21:35:41 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/14 19:49:51 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf_dec(int num)
+int	ft_printf_dec(int num)
 {
 	char *n;
 	int i;
