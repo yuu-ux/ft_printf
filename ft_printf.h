@@ -11,20 +11,20 @@
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#define FT_PRINTF_H
 
-# include <stdarg.h>
-# include <stdint.h>
-# include "libft/libft.h"
-# define HEX_UPPER	"0123456789ABCDEF"
-# define HEX_LOWER	"0123456789abcdef"
+#include <stdarg.h>
+#include <stdint.h>
+#include "libft/libft.h"
+#define HEX_UPPER "0123456789ABCDEF"
+#define HEX_LOWER "0123456789abcdef"
 
-int	ft_printf(const char *str, ...);
-int	ft_printf_unsigned_dec(unsigned int n);
-int	ft_printf_char(char c);
-int	ft_printf_str(char *s);
+int ft_printf(const char *str, ...);
+int ft_printf_unsigned_dec(unsigned int n);
+int ft_printf_char(char c);
+int ft_printf_str(char *s);
 int ft_printf_dec(int num);
 int ft_printf_ptr(void *ptr);
-int	ft_printf_hex(unsigned int hex, char specifier);
+int ft_printf_hex(unsigned int hex, char specifier);
 
 #endif
