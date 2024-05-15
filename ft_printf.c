@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-static int	print_formatted(const char specifier, va_list ap)
+static int print_formatted(const char specifier, va_list ap)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	if (specifier == 'c')
@@ -37,10 +37,10 @@ static int	print_formatted(const char specifier, va_list ap)
 		count += ft_printf_char(specifier);
 	return (count);
 }
-int	ft_printf(const char *str, ...)
+int ft_printf(const char *str, ...)
 {
-	va_list	ap;
-	int		count;
+	va_list ap;
+	int count;
 
 	count = 0;
 	va_start(ap, str);
@@ -59,7 +59,7 @@ int	ft_printf(const char *str, ...)
 	return (count);
 }
 
-int	main(void)
+int main(void)
 {
 	int b = 20;
 	printf("%p\n", &b);

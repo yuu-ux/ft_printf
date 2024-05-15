@@ -12,18 +12,28 @@
 
 #include "ft_printf.h"
 
+int ft_printf_ptr_hex(uintptr_t n)
+{
+	char *hex_digit;
+	int count;
+
+	hex_digit = HEX_LOWER;
+	count = 0;
+
+	if (n >= 16)
+		count += ft_printf_ptr_hex(n / 16);
+	ft_printf_char(hex_digit[(n % 16)]);
+	return (count + 1);
+}
 int ft_printf_ptr(void *ptr)
 {
 	int count;
-	uintptr_t address;
-	char *hex_digit;
-    hex_digit = HEX_LOWER;
-    
-	address = (uintptr_t)ptr;
+	uintptr_t ptr_n;
 
-	count = 0;
-	if (address <= 16)
-		count += ft_printf_ptr((void *)(address / 16));
-	ft_printf_char(hex_digit[(address % 16)]);
-	return (count + 1);
+	count = 2;
+	ptr_n = (uintptr_t)ptr;
+
+	write(1, "0x", 2);
+	count += ft_printf_ptr_hex(ptr_n);
+	return (count);
 }
