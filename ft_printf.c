@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 20:24:10 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/14 21:40:49 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/15 20:09:41 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static int	print_formatted(const char specifier, va_list ap)
 		count += ft_printf_char(va_arg(ap, int));
 	else if (specifier == 's')
 		count += ft_printf_str(va_arg(ap, char *));
-	// else if (specifier == 'p')
-	// 	count += ft_printf_ptr(va_arg(ap, void *));
+	else if (specifier == 'p')
+		count += ft_printf_ptr(va_arg(ap, void *));
 	else if (specifier == 'd')
 		count += ft_printf_dec(va_arg(ap, int));
 	else if (specifier == 'i')
@@ -61,8 +61,8 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	int b = 255;
-	printf("%d\n", ft_printf("%X\n", b));
-	printf("%d\n", printf("%X\n", b));
+	int b = 20;
+	printf("%p\n", &b);
+	ft_printf("%p\n", &b);
 	return (0);
 }
