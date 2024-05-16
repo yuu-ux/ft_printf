@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 20:31:49 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/14 19:49:51 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/16 17:02:19 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_printf_dec(int num)
 {
-	char *n;
-	int i;
+	char	*n;
+	int		i;
 
 	i = 0;
 	n = ft_itoa(num);

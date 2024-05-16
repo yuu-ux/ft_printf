@@ -6,7 +6,7 @@
 #    By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 16:35:15 by yehara            #+#    #+#              #
-#    Updated: 2024/05/12 16:35:17 by yehara           ###   ########.fr        #
+#    Updated: 2024/05/16 16:30:44 by yehara           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,12 +23,12 @@ OBJS	= ${SRCS:.c=.o}
 ${NAME}: ${OBJS}
 	make -C libft
 	cp ${LIBFT} ${NAME}
-	${AR} rcs ${NAME} ${OBJS}
+	${AR} rc ${NAME} ${OBJS}
 
 all: ${NAME}
 
 clean:
-	make fclean -C libft
+	make clean -C libft
 	${RM} ${OBJS}
 
 fclean: clean
