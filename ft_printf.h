@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 16:33:38 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/16 20:44:24 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/16 20:47:57 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include "libft/libft.h"
 # include <stdarg.h>
 # include <stdint.h>
-# define HEX_UPPER "0123456789ABCDEF"
-# define HEX_LOWER "0123456789abcdef"
+# define HEX "0123456789abcdef"
 
 int	ft_printf(const char *str, ...);
 int	ft_printf_unsigned_dec(unsigned int n);

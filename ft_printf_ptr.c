@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 20:24:07 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/16 16:53:01 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/16 20:48:43 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_printf_ptr_hex(uintptr_t n)
 	char	*hex_digit;
 	int		count;
 
-	hex_digit = HEX_LOWER;
+	hex_digit = HEX;
 	count = 0;
 	if (n >= 16)
 		count += ft_printf_ptr_hex(n / 16);
