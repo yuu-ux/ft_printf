@@ -6,7 +6,7 @@
 /*   By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 20:24:10 by yehara            #+#    #+#             */
-/*   Updated: 2024/05/16 14:28:58 by yehara           ###   ########.fr       */
+/*   Updated: 2024/05/16 20:45:07 by yehara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ static int	print_formatted(const char specifier, va_list ap)
 	else if (specifier == 'u')
 		count += ft_printf_unsigned_dec(va_arg(ap, unsigned int));
 	else if (specifier == 'x')
-		count += ft_printf_hex(va_arg(ap, unsigned int), specifier);
+		count += ft_printf_hex(va_arg(ap, unsigned int), ft_tolower);
 	else if (specifier == 'X')
-		count += ft_printf_hex(va_arg(ap, unsigned int), specifier);
+		count += ft_printf_hex(va_arg(ap, unsigned int), ft_toupper);
 	else
 		count += ft_printf_char(specifier);
 	return (count);
