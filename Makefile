@@ -6,7 +6,7 @@
 #    By: yehara <yehara@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 16:35:15 by yehara            #+#    #+#              #
-#    Updated: 2024/05/16 17:16:31 by yehara           ###   ########.fr        #
+#    Updated: 2024/05/16 20:21:10 by yehara           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libftprintf.a
 CC	= cc
 FLAGS	= -Wall -Werror -Wextra
 LIBFT	= ./libft/libft.a
-SRCS	= ${wildcard *.c}
+SRCS	= ft_printf.c ft_printf_char.c ft_printf_dec.c ft_printf_hex.c ft_printf_ptr.c ft_printf_str.c ft_printf_unsigned_dec.c
 OBJS	= ${SRCS:.c=.o}
 
 %.o:%.c
